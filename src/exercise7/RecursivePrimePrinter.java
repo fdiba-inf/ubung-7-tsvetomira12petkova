@@ -13,11 +13,27 @@ public class RecursivePrimePrinter {
     }
 
     public static void printPrimes(int n) {
-        // Implement recursive method
+      for (int z=n; n>0; n--){
+
+        if (isPrime(n) == false){
+        System.out.println(n);
+        }
+      }
+        
     }
 
     public static boolean isPrime(int n) {
-        // Implement method
-        return false;
-    }
+      boolean prime = false;
+        while (n>2) {
+          if(n%2==0) {
+            prime = true;
+           break;
+          }
+        
+          n++;
+        }
+
+        return prime;
+    
+}
 }
